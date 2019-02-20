@@ -6,6 +6,7 @@ const BookSchema = new Schema({
     Title: String,
     Author: String,
     Plot: String,
+    ombdID: String
     // unique: true
 });
 

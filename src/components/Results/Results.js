@@ -9,7 +9,7 @@ function Results(props){
             <div>
                     {props.movies.map((movie, i) => (
                         <div key={movie.imdbID}>{movie.Title}
-                            <button onClick={()=>props.handleSave(movie.imdbID)}>Save Movie</button>
+                            <button onClick={()=>props.handleSave(movie.Title)}>Save Movie</button>
                         </div>
                     ))}            
 

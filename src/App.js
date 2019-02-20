@@ -4,18 +4,6 @@ import Nav from "./components/Navbar/Navbar"
 import Saved from "./pages/Saved/Saved"
 import Search from "./pages/Search/Search"
 import './App.css';
-// import mongoose from "mongoose"
-
-
-// var db = require("../models/Book");
-
-
-// mongoose.connect("mongodb://localhost/NYT-books", { useNewUrlParser: true })
-
-// db.Booklist.create({ name: "Book List"})
-// .then(function(dbBooklist){
-//   console.log("DB created")
-// })
 
 
 class App extends Component {
