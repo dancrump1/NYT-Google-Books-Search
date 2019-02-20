@@ -16,7 +16,7 @@ class Searchbar extends React.Component{
 
     handleSubmit = () => {
         
-            axios.get(`http://www.omdbapi.com/?i=tt3896198&t=${this.state.input}&apikey=80253409`).then(response=>{
+            axios.get(`https://www.omdbapi.com/?i=tt3896198&t=${this.state.input}&apikey=80253409`).then(response=>{
                 // console.log(response)
                 let movieList = response.data;
                     this.setState({
