@@ -1,6 +1,8 @@
 import React from "react"
 import Results from "../../components/Results/Results"
 import axios from "axios"
+import API from "../../util/API";
+
 
 
 class Searchbar extends React.Component{
@@ -26,9 +28,11 @@ class Searchbar extends React.Component{
             })
         };
 
-        handleSave = (omdbID)=>{
-            console.log(omdbID)
-            
+        handleSave = (Title)=>{
+            console.log(Title);
+            API.saveBook({Title: `${Title}`})
+            .then(res => console.log(res))
+            .catch(err=> console.log(err))
         }
         
     
