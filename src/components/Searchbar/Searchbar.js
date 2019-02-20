@@ -16,9 +16,9 @@ class Searchbar extends React.Component{
 
     handleSubmit = () => {
         
-            axios.get(`https://www.omdbapi.com/?i=tt3896198&t=${this.state.input}&apikey=80253409`).then(response=>{
+            axios.get(`https://www.omdbapi.com/?i=tt3896198&s=${this.state.input}&apikey=80253409`).then(response=>{
                 // console.log(response)
-                let movieList = response.data;
+                let movieList = response.data.Search;
                     this.setState({
                         movies: movieList,
                     })
@@ -26,8 +26,8 @@ class Searchbar extends React.Component{
             })
         };
 
-        handleSave = ()=>{
-            console.log(this.state.movies.Title)
+        handleSave = (omdbID)=>{
+            console.log(omdbID)
             
         }
         

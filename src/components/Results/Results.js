@@ -7,13 +7,16 @@ function Results(props){
 
         return (
             <div>
-                    {/* {props.movies.map(movie => (
-                        <div key={movie.Title}>{movie.Title}</div>
-                    ))}             */}
+                    {props.movies.map((movie, i) => (
+                        <div key={movie.imdbID}>{movie.Title}
+                            <button onClick={()=>props.handleSave(movie.imdbID)}>Save Movie</button>
+                        </div>
+                    ))}            
 
-                    <div>{props.movies.Title}</div>
-                    <div>{props.movies.Plot}</div>
-                    <button onClick={props.handleSave}>Save Movie</button>
+                {/* <div>{props.movies.Title}
+                <div>{props.movies.Plot}</div>
+                </div> */}
+                    
 
             </div>
         )
